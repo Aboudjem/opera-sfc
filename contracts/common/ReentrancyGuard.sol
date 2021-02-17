@@ -35,7 +35,10 @@ contract ReentrancyGuard is Initializable {
         _guardCounter += 1;
         uint256 localCounter = _guardCounter;
         _;
-        require(localCounter == _guardCounter, "ReentrancyGuard: reentrant call");
+        require(
+            localCounter == _guardCounter,
+            "ReentrancyGuard: reentrant call"
+        );
     }
 
     uint256[50] private ______gap;

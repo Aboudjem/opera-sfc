@@ -7,10 +7,10 @@ contract UnitTestSFC is SFC {
     uint256 public time;
     bool public allowedNonNodeCalls;
 
-//    function minSelfStake() public pure returns (uint256) {
-//        // 0.3175000 FTM
-//        return 0.3175000 * 1e18;
-//    }
+    //    function minSelfStake() public pure returns (uint256) {
+    //        // 0.3175000 FTM
+    //        return 0.3175000 * 1e18;
+    //    }
 
     function rebaseTime() external {
         time = block.timestamp;
@@ -32,7 +32,11 @@ contract UnitTestSFC is SFC {
         return SFC._now();
     }
 
-    function highestLockupEpoch(address delegator, uint256 validatorID) external view returns (uint256) {
+    function highestLockupEpoch(address delegator, uint256 validatorID)
+        external
+        view
+        returns (uint256)
+    {
         return _highestLockupEpoch(delegator, validatorID);
     }
 
@@ -51,5 +55,3 @@ contract UnitTestSFC is SFC {
         return SFC.isNode(addr);
     }
 }
-
-

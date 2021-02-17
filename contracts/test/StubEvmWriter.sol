@@ -10,5 +10,9 @@ contract StubEvmWriter is IEVMWriter {
 
     function swapCode(address acc, address with) external override {}
 
-    function setStorage(address acc, bytes32 key, bytes32 value) external override {}
+    function setStorage(
+        address acc,
+        bytes32 key,
+        bytes32 value
+    ) external override {}
 }

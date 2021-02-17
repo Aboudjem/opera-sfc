@@ -4,7 +4,6 @@ pragma solidity ^0.8.1;
 import "../common/Decimal.sol";
 
 contract StakersConstants {
-
     uint256 internal constant OK_STATUS = 0;
     uint256 internal constant WITHDRAWN_BIT = 1;
     uint256 internal constant OFFLINE_BIT = 1 << 3;
